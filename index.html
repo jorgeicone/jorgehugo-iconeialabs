@@ -945,6 +945,33 @@
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 22px;
     }
+    .testimonials-single {
+      display: flex;
+      justify-content: center;
+    }
+    .testimonials-single .testimonial { max-width: 760px; padding: 44px 48px 40px; }
+    .testimonial.featured {
+      background:
+        linear-gradient(135deg, rgba(108, 190, 214, 0.05), rgba(144, 130, 196, 0.05)),
+        var(--card-bg);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+    }
+    .testimonial.featured blockquote {
+      font-size: 17px;
+      line-height: 1.75;
+      margin: 28px 0 30px;
+    }
+    .testimonial-meta {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      font-style: italic;
+      opacity: 0.75;
+    }
+    @media (max-width: 640px) {
+      .testimonials-single .testimonial { padding: 32px 24px; }
+      .testimonial.featured blockquote { font-size: 15px; padding-left: 18px; }
+    }
     .testimonial {
       background: var(--card-bg);
       border: 1px solid var(--border);
@@ -1848,25 +1875,6 @@
       </div>
     </section>
 
-    <!-- 11. VIDEO -->
-    <section class="block reveal">
-      <div class="section-head">
-        <span class="section-eyebrow">En escena</span>
-        <h2 class="section-title">Speaker <span class="italic grad">en acción</span></h2>
-        <p class="section-subtitle">
-          Fragmentos de conferencias, mentorías y formaciones — para conocer el estilo antes de coordinar.
-        </p>
-      </div>
-      <div class="video-block">
-        <div class="video-frame" id="video-frame">
-          <div class="play-btn">
-            <svg width="28" height="28" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-          <div class="video-label">Reel · próximamente</div>
-        </div>
-      </div>
-    </section>
-
     <!-- 12. ESTUDIANTES -->
     <section id="estudiantes" class="block reveal">
       <div class="section-head">
@@ -1933,61 +1941,40 @@
       </div>
     </section>
 
-    <!-- 14. TESTIMONIOS -->
+    <!-- 14. TESTIMONIO -->
     <section class="block reveal">
       <div class="section-head">
-        <span class="section-eyebrow">Testimonios</span>
+        <span class="section-eyebrow">Testimonio</span>
         <h2 class="section-title">Voces que han <span class="italic grad">trabajado conmigo</span></h2>
         <p class="section-subtitle">
-          Una selección de testimonios reales de clientes, emprendedores y aliados institucionales.
+          Recomendación pública desde LinkedIn — una entre las muchas conversaciones que sostengo con
+          mentees y clientes en LATAM.
         </p>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial">
+      <div class="testimonials-grid testimonials-single">
+        <div class="testimonial featured">
           <blockquote>
-            Jorge Hugo tiene esa capacidad poco común de ver el negocio desde adentro y desde afuera al mismo
-            tiempo. En 3 meses teníamos una estrategia clara y un equipo que sabía hacia dónde iba. Eso no
-            tiene precio.
+            Tengo la suerte de contar con Jorge Pérez como mi mentor en mi proceso de construcción de marca
+            personal y desarrollo de productos. La experiencia y conocimientos de Jorge son invaluables. No
+            solo aporta una vasta experiencia en el campo, sino que también demuestra una increíble empatía
+            y una capacidad de escucha activa que realmente marcan la diferencia. Jorge no solo guía, sino que
+            se asegura de entender tus necesidades y objetivos, adaptando su enfoque para ayudarte a alcanzar
+            tus metas de manera efectiva. Gracias a su mentoría, he podido alinear mis procesos de
+            planificación y avanzar con confianza en la creación de mis productos. Recomiendo a Jorge a
+            cualquier persona que busque un mentor dedicado y experimentado.
           </blockquote>
           <div class="testimonial-author">
-            <div class="testimonial-avatar">MR</div>
+            <div class="testimonial-avatar">AS</div>
             <div>
-              <div class="testimonial-name">Marcela Rodríguez</div>
-              <div class="testimonial-role">CEO · Empresa de servicios B2B · Bogotá</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial">
-          <blockquote>
-            Pensé que ya sabía todo lo que necesitaba saber de mi propio negocio. El diagnóstico inicial me
-            mostró 4 puntos ciegos que estaban frenando mi crecimiento. El proceso fue incómodo y
-            transformador.
-          </blockquote>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">AM</div>
-            <div>
-              <div class="testimonial-name">Andrés Mejía</div>
-              <div class="testimonial-role">Fundador · Startup EdTech · Medellín</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial">
-          <blockquote>
-            Como mentor combina rigor metodológico con experiencia de campo real. Los emprendedores no salen
-            con apuntes — salen con proyectos construidos, prompts funcionando y una forma de pensar nueva
-            sobre los negocios.
-          </blockquote>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">UE</div>
-            <div>
-              <div class="testimonial-name">Coordinación académica</div>
-              <div class="testimonial-role">Programa de mentoría a emprendedoras</div>
+              <div class="testimonial-name">Alexandra Salvador Sanabria</div>
+              <div class="testimonial-role">Estratega en Ads + Ecosistema Digital · Fue cliente de Jorge Hugo</div>
+              <div class="testimonial-meta">Recomendación publicada el 29 de mayo de 2024 · LinkedIn</div>
             </div>
           </div>
         </div>
       </div>
       <div class="testimonials-cta">
-        Ver todas las recomendaciones públicas en mi <a href="https://www.linkedin.com/in/jorgehugoperezgaona/" target="_blank" rel="noopener">perfil de LinkedIn</a>.
+        Ver el perfil profesional completo y la red de respaldos en mi <a href="https://www.linkedin.com/in/jorgehugoperezgaona/" target="_blank" rel="noopener">LinkedIn</a>.
       </div>
     </section>
 
@@ -2264,3 +2251,4 @@
 
 </body>
 </html>
+                                                                                                                                                                                                                                                                                                                                                                                                       
